@@ -4,15 +4,16 @@ import "./index.css";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import { HelmetProvider } from "react-helmet-async";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Root from "./routes/root";
 import { Tools } from "./routes/tools";
+import { AppHeader, AppContent, AppFooter } from "./layout";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
-const router = createBrowserRouter([
+const router = [
   {
     path: "/",
     element: <Root />,
@@ -21,12 +22,22 @@ const router = createBrowserRouter([
     path: "/tools",
     element: <Tools />,
   },
-]);
+];
 
 root.render(
   <React.StrictMode>
     <HelmetProvider>
-      <RouterProvider router={router} />
+      <BrowserRouter>
+        <AppHeader />
+        <AppContent>
+          <Routes>
+            {router.map((route, i) => (
+              <Route key={i} path={route.path} element={route.element} />
+            ))}
+          </Routes>
+        </AppContent>
+        <AppFooter />
+      </BrowserRouter>
     </HelmetProvider>
   </React.StrictMode>
 );

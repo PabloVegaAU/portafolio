@@ -66,7 +66,7 @@ const Header = () => {
             to="/"
             aria-label="My universitary's Logo, click to return to the init."
           >
-            <img src="/imgs/AutonomaLogo.png" alt="Logo" className="h-16" />
+            <img src="./imgs/Logo.png" alt="Logo" className="h-24" />
           </Link>
         </div>
         <div className="flex flex-1 justify-end">

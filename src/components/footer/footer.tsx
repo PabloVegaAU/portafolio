@@ -1,8 +1,3 @@
-import React from "react";
-
-type FooterProps = {
-  children: React.ReactNode;
-};
-export const Footer = (props: FooterProps) => {
-  return <>{props.children}</>;
+export const Footer = () => {
+  return <>123123</>;
 };
