@@ -52,7 +52,9 @@ const Root = () => {
         />
       </Helmet>
       <div className="mx-auto text-center font-serif p-3 md:p-7">
-        <h1 className="text-2xl md:text-5xl">{profile.authorMYS}</h1>
+        <span translate="no">
+          <h1 className="text-2xl md:text-5xl">{profile.authorMYS}</h1>
+        </span>
         <h1 className="text-2xl md:text-5xl">{profile.mainDescription}</h1>
         <h1 className="text-2xl md:text-5xl">{profile.subDescription}</h1>
       </div>
