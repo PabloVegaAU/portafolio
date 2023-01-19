@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Paths } from "../../store/paths";
 import { Github, Facebook, LinkeIn } from "../icons";
 
 const Header = () => {
@@ -10,12 +11,12 @@ const Header = () => {
   };
   const links: Link[] = [
     {
-      path: "/tools/",
+      path: Paths.tools,
       title: "TOOLS",
       arialabel: "Read more about my dev tools.",
     },
     {
-      path: "/tools/",
+      path: Paths.tools,
       title: "CONTACT",
       arialabel: "Contact with me.",
     },
@@ -30,19 +31,19 @@ const Header = () => {
 
   const networks: Network[] = [
     {
-      path: "/tools/",
+      path: Paths.tools,
       icon: <Github />,
       title: "Facebook",
       arialabel: "Redirect to facebook.",
     },
     {
-      path: "/tools/",
+      path: Paths.tools,
       icon: <Facebook />,
       title: "Facebook",
       arialabel: "Redirect to facebook.",
     },
     {
-      path: "/tools/",
+      path: Paths.tools,
       icon: <LinkeIn />,
       title: "LinkedIn",
       arialabel: "Redirect to a whatsapp chat.",
@@ -63,7 +64,7 @@ const Header = () => {
         </div>
         <div className="flex flex-1 justify-center">
           <Link
-            to="/"
+            to={Paths.root}
             aria-label="My universitary's Logo, click to return to the init."
           >
             <img src="./imgs/Logo.png" alt="Logo" className="h-24" />

@@ -8,11 +8,7 @@ type Props = {
 };
 
 export const AppHeader = () => {
-  return (
-    <header>
-      <Header />
-    </header>
-  );
+  return <Header />;
 };
 export const AppContent = (props: Props) => {
   return (

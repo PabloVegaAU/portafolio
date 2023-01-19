@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Root from "./routes/root";
 import { Tools } from "./routes/tools";
 import { AppHeader, AppContent, AppFooter } from "./layout";
+import { Paths } from "./store/paths";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,11 +16,11 @@ const root = ReactDOM.createRoot(
 
 const router = [
   {
-    path: "/",
+    path: Paths.root,
     element: <Root />,
   },
   {
-    path: "/tools",
+    path: Paths.tools,
     element: <Tools />,
   },
 ];
