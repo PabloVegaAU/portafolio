@@ -1,5 +1,11 @@
 export const Paths = {
-  root: "/reactts-portafolio-pcvv/",
-  tools: "/tools",
+  root: "/portafolio-pcvv/",
+  tools: "/portafolio-pcvv/tools",
 };
-//root: "/reactts-portafolio-pcvv/",
+//root: "/portafolio-pcvv/",
+//"homepage": "https://pablovegaau.github.io/portafolio-pcvv",
+export const PathSociales = {
+  github: "https://github.com/PabloVegaAU",
+  facebook: "https://www.facebook.com/pablo.vegavalverde.7",
+  linkedin: "https://www.linkedin.com/in/pablo-cesar-vega-valverde-aa817a1b7/",
+};
