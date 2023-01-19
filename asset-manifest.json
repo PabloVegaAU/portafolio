@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/reactts-portafolio-pcvv/static/css/main.98d622bd.css",
-    "main.js": "/reactts-portafolio-pcvv/static/js/main.542a744a.js",
-    "static/js/787.821540f1.chunk.js": "/reactts-portafolio-pcvv/static/js/787.821540f1.chunk.js",
-    "service-worker.js": "/reactts-portafolio-pcvv/service-worker.js",
-    "index.html": "/reactts-portafolio-pcvv/index.html",
-    "main.98d622bd.css.map": "/reactts-portafolio-pcvv/static/css/main.98d622bd.css.map",
-    "main.542a744a.js.map": "/reactts-portafolio-pcvv/static/js/main.542a744a.js.map",
-    "787.821540f1.chunk.js.map": "/reactts-portafolio-pcvv/static/js/787.821540f1.chunk.js.map"
+    "main.css": "/static/css/main.98d622bd.css",
+    "main.js": "/static/js/main.ba4cc72b.js",
+    "static/js/787.821540f1.chunk.js": "/static/js/787.821540f1.chunk.js",
+    "service-worker.js": "/service-worker.js",
+    "index.html": "/index.html",
+    "main.98d622bd.css.map": "/static/css/main.98d622bd.css.map",
+    "main.ba4cc72b.js.map": "/static/js/main.ba4cc72b.js.map",
+    "787.821540f1.chunk.js.map": "/static/js/787.821540f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.98d622bd.css",
-    "static/js/main.542a744a.js"
+    "static/js/main.ba4cc72b.js"
   ]
 }
