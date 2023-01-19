@@ -1,4 +1,4 @@
-export const LinkeIn = () => (
+export const LinkedIn = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="w-6 h-6 sm:w-8 sm:h-8"

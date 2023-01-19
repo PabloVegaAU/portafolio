@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Paths } from "../../store/paths";
-import { Github, Facebook, LinkeIn } from "../icons";
+import { Paths, PathSociales } from "../../store";
+import { Github, Facebook, LinkedIn } from "../icons";
 
 const Header = () => {
   type Link = {
@@ -31,22 +31,22 @@ const Header = () => {
 
   const networks: Network[] = [
     {
-      path: Paths.tools,
+      path: PathSociales.github,
       icon: <Github />,
       title: "Facebook",
-      arialabel: "Redirect to facebook.",
+      arialabel: "Redirect to my  GitHub.",
     },
     {
-      path: Paths.tools,
+      path: PathSociales.facebook,
       icon: <Facebook />,
       title: "Facebook",
       arialabel: "Redirect to facebook.",
     },
     {
-      path: Paths.tools,
-      icon: <LinkeIn />,
+      path: PathSociales.linkedin,
+      icon: <LinkedIn />,
       title: "LinkedIn",
-      arialabel: "Redirect to a whatsapp chat.",
+      arialabel: "Redirect to my LinkedIn.",
     },
   ];
 
@@ -56,9 +56,11 @@ const Header = () => {
         <div className="flex flex-1 justify-start">
           <ul className="flex flex-row gap-3">
             {links.map((link, i) => (
-              <Link key={i} to={link.path} aria-label={link.arialabel}>
-                <li>{link.title}</li>
-              </Link>
+              <li>
+                <Link key={i} to={link.path} aria-label={link.arialabel}>
+                  {link.title}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
@@ -73,9 +75,17 @@ const Header = () => {
         <div className="flex flex-1 justify-end">
           <ul className="flex flex-row justify-between gap-2 md:gap-3">
             {networks.map((network, i) => (
-              <Link key={i} to={network.path} aria-label={network.arialabel}>
-                <li>{network.icon}</li>
-              </Link>
+              <li>
+                <a
+                  key={i}
+                  href={network.path}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={network.arialabel}
+                >
+                  {network.icon}
+                </a>
+              </li>
             ))}
           </ul>
         </div>
