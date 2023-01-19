@@ -1,7 +1,6 @@
 export const Paths = {
-  base: "/",
-  root: "/reactts-portafolio-pcvv/",
+  root: "/",
   tools: "/tools",
 };
-//base: "/reactts-portafolio-pcvv/",
 //root: "/reactts-portafolio-pcvv/",
+//"homepage": "https://pablovegaau.github.io/reactts-portafolio-pcvv",
