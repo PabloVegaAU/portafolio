@@ -46,7 +46,6 @@ const Root = () => {
   return (
     <>
       <Helmet>
-        <title>{profile.acronymDescrip}</title>
         <meta
           name="description"
           content="Este sitio web está hecho para mostrar el recorrido, conocimientos y herramientas que he adquirido a lo largo de mi vida como estudiante de la carrera de Ingeniería en Sistemas"
