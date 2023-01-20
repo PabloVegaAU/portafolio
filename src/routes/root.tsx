@@ -7,41 +7,41 @@ const Root = () => {
   const CardsLeftTop = [
     {
       title: "Quien soy",
-      content: [who.main],
+      content: [who.main]
     },
     {
       title: "Contactame",
       content: [
         "Lima, Perú",
-        '<a className="text-emerald-500 hover:text-emerald-600 font-mono font-medium"' +
+        '<a class="text-emerald-500 hover:text-emerald-600 font-mono font-medium"' +
           'href="mailto:' +
           profile.emailCurrent +
           '?subject=Contactar a Pablo Vega - DESARROLLADOR" target="_blank">' +
           profile.emailCurrent +
           "</a>",
-        '<a className="text-emerald-500 hover:text-emerald-600 font-mono font-medium"' +
+        '<a class="text-emerald-500 hover:text-emerald-600 font-mono font-medium"' +
           ' href="https://wa.me/' +
           profile.whatsapp +
           '/" target="_blank">' +
           profile.phoneCurrent +
-          "</a>",
-      ],
+          "</a>"
+      ]
     },
     {
       title: "Servicios",
       content: [
         "Diseño Web Responsive",
         "Desarrollo Backend Microservicios",
-        "Desarrollo FrontEnd Responsive",
-      ],
-    },
+        "Desarrollo FrontEnd Responsive"
+      ]
+    }
   ];
   const CardsRightDown = [
     {
       title: "Años de experiencia",
-      content: [profile.yearsExperience],
+      content: [profile.yearsExperience]
     },
-    { title: "Proyectos", content: [profile.proyects] },
+    { title: "Proyectos", content: [profile.proyects] }
   ];
   return (
     <>
@@ -52,7 +52,9 @@ const Root = () => {
         />
       </Helmet>
       <div className="mx-auto text-center font-serif p-3 md:p-7">
-        <h1 className="text-2xl md:text-5xl">{profile.authorMYS}</h1>
+        <span translate="no">
+          <h1 className="text-2xl md:text-5xl">{profile.authorMYS}</h1>
+        </span>
         <h1 className="text-2xl md:text-5xl">{profile.mainDescription}</h1>
         <h1 className="text-2xl md:text-5xl">{profile.subDescription}</h1>
       </div>
