@@ -1,29 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+// Router import
+import { router } from "./routers";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Root from "./routes/root";
-import { Tools } from "./routes/tools";
-import { AppHeader, AppContent, AppFooter } from "./layout";
-import { Paths } from "./store/paths";
+import { AppContent, AppFooter, AppHeader } from "./layout";
+// Translation imports
+import i18next from "i18next";
+import { initReactI18next } from "react-i18next";
+import { en, es } from "./translations";
+// Global CSS
+import "./index.css";
+
+i18next.use(initReactI18next).init({
+  interpolation: {
+    escapeValue: false,
+  },
+  resources: {
+    es: {
+      translation: es,
+    },
+    en: {
+      translation: en,
+    },
+  },
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
-
-const router = [
-  {
-    path: Paths.root,
-    element: <Root />,
-  },
-  {
-    path: Paths.tools,
-    element: <Tools />,
-  },
-];
 
 root.render(
   <React.StrictMode>
