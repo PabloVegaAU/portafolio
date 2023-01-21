@@ -7,7 +7,7 @@ const Root = () => {
   const CardsLeftTop = [
     {
       title: "Quien soy",
-      content: [who.main]
+      content: [who.main],
     },
     {
       title: "Contactame",
@@ -24,24 +24,24 @@ const Root = () => {
           profile.whatsapp +
           '/" target="_blank">' +
           profile.phoneCurrent +
-          "</a>"
-      ]
+          "</a>",
+      ],
     },
     {
       title: "Servicios",
       content: [
         "Diseño Web Responsive",
         "Desarrollo Backend Microservicios",
-        "Desarrollo FrontEnd Responsive"
-      ]
-    }
+        "Desarrollo FrontEnd Responsive",
+      ],
+    },
   ];
   const CardsRightDown = [
     {
       title: "Años de experiencia",
-      content: [profile.yearsExperience]
+      content: [profile.yearsExperience],
     },
-    { title: "Proyectos", content: [profile.proyects] }
+    { title: "Proyectos", content: [profile.proyects] },
   ];
   return (
     <>
