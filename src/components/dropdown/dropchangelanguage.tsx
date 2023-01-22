@@ -7,7 +7,7 @@ export const DropdownLanguage = () => {
   const { i18n, t } = useTranslation();
   const [language, setLanguage] = useState("es");
   const [dropdownShow, setDropdownShow] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLButtonElement>(null);
   useClickOutside(dropdownRef, () => setDropdownShow(false));
 
   const handleLangChange = (evt: string) => {
@@ -22,22 +22,18 @@ export const DropdownLanguage = () => {
       <button
         onClick={() => setDropdownShow(!dropdownShow)}
         className="uppercase"
-      >
+        ref={dropdownRef}>
         {t("general.language")}
       </button>
       {dropdownShow && (
-        <div
-          className="absolute bg-white divide-y divide-gray-100 rounded shadow"
-          ref={dropdownRef}
-        >
+        <div className="absolute bg-white divide-y divide-gray-100 rounded shadow">
           <ul className="py-1 text-sm ">
             {Languages.map((lang) => (
               <li
                 className={
                   "block px-4 py-2 hover:bg-gray-100 " +
                   (lang.lng === language ? "bg-gray-100 dark:bg-gray-600" : "")
-                }
-              >
+                }>
                 <button onClick={() => handleLangChange(lang.lng)}>
                   {lang.label}
                 </button>
