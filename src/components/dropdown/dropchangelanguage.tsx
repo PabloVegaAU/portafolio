@@ -7,7 +7,7 @@ export const DropdownLanguage = () => {
   const { i18n, t } = useTranslation();
   const [language, setLanguage] = useState("es");
   const [dropdownShow, setDropdownShow] = useState(false);
-  const dropdownRef = useRef<HTMLButtonElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   useClickOutside(dropdownRef, () => setDropdownShow(false));
 
   const handleLangChange = (evt: string) => {
@@ -18,11 +18,10 @@ export const DropdownLanguage = () => {
   };
 
   return (
-    <>
+    <div ref={dropdownRef}>
       <button
         onClick={() => setDropdownShow(!dropdownShow)}
-        className="uppercase"
-        ref={dropdownRef}>
+        className="uppercase">
         {t("general.language")}
       </button>
       {dropdownShow && (
@@ -42,6 +41,6 @@ export const DropdownLanguage = () => {
           </ul>
         </div>
       )}
-    </>
+    </div>
   );
 };
