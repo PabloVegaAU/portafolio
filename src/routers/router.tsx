@@ -1,14 +1,13 @@
-import Root from "../routes/root";
-import { Tools } from "../routes/tools";
+import { Root, Tools } from "../routes";
 import { Paths } from "../store";
 
 export const router = [
   {
     path: Paths.root,
-    element: <Root />,
+    element: <Root />
   },
   {
     path: Paths.tools,
-    element: <Tools />,
-  },
+    element: <Tools />
+  }
 ];

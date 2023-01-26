@@ -1,47 +1,40 @@
 import { Helmet } from "react-helmet-async";
+
 import { Tarjeta, TarjetaExpo } from "../components/card";
+import { SendEmail, SendWhatsapp } from "../components/profile";
 import { Me } from "../store/me";
 
-const Root = () => {
+export const Root = () => {
   const { profile, who } = Me;
+
   const CardsLeftTop = [
     {
       title: "Quien soy",
-      content: [who.main],
+      content: [who.main]
     },
     {
       title: "Contactame",
       content: [
         "Lima, Perú",
-        '<a class="text-emerald-500 hover:text-emerald-600 font-mono font-medium"' +
-          'href="mailto:' +
-          profile.emailCurrent +
-          '?subject=Contactar a Pablo Vega - DESARROLLADOR" target="_blank">' +
-          profile.emailCurrent +
-          "</a>",
-        '<a class="text-emerald-500 hover:text-emerald-600 font-mono font-medium"' +
-          ' href="https://wa.me/' +
-          profile.whatsapp +
-          '/" target="_blank">' +
-          profile.phoneCurrent +
-          "</a>",
-      ],
+        <SendEmail {...profile} />,
+        <SendWhatsapp {...profile} />
+      ]
     },
     {
       title: "Servicios",
       content: [
         "Diseño Web Responsive",
         "Desarrollo Backend Microservicios",
-        "Desarrollo FrontEnd Responsive",
-      ],
-    },
+        "Desarrollo FrontEnd Responsive"
+      ]
+    }
   ];
   const CardsRightDown = [
     {
       title: "Años de experiencia",
-      content: [profile.yearsExperience],
+      content: [profile.yearsExperience]
     },
-    { title: "Proyectos", content: [profile.proyects] },
+    { title: "Proyectos", content: [profile.proyects] }
   ];
   return (
     <>
@@ -58,7 +51,7 @@ const Root = () => {
         <h1 className="text-2xl md:text-5xl">{profile.mainDescription}</h1>
         <h1 className="text-2xl md:text-5xl">{profile.subDescription}</h1>
       </div>
-      <div className="flex flex-col md:flex-row gap-5 font-serif p-10 md:py-20 md:px-16">
+      <div className="flex flex-col md:flex-row gap-5 font-serif p:10 md:p-0 lg:py-20 lg:px-16">
         {/* CARDS LEFT MD:TOP */}
         <div className={"flex flex-1 flex-col gap-12 my-auto"}>
           {CardsLeftTop.map((card, i) => (
@@ -68,8 +61,10 @@ const Root = () => {
         {/* IMAGE PROFILE */}
         <div className="hidden md:block border-2 border-gray-200 rounded-t-full rounded-b-full p-4 mx-5">
           <img
-            src="https://picsum.photos/400/800"
-            className={"rounded-t-full rounded-b-full w-full h-full"}
+            src="https://picsum.photos/2400/4800"
+            className={
+              "rounded-t-full rounded-b-full max-w-xs h-full object-cover"
+            }
             alt="Pablo Vega"
           />
         </div>
@@ -83,7 +78,7 @@ const Root = () => {
         <div className="md:hidden mx-auto border-2 border-gray-200 rounded-t-full rounded-b-full p-4">
           <img
             src="https://picsum.photos/400/800"
-            className={"rounded-t-full rounded-b-full w-full h-full"}
+            className={"rounded-t-full rounded-b-full w-full"}
             alt="Pablo Vega"
           />
         </div>
@@ -91,5 +86,3 @@ const Root = () => {
     </>
   );
 };
-
-export default Root;
