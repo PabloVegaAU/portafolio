@@ -1,9 +1,12 @@
 import { Helmet } from "react-helmet-async";
+
 import { Tarjeta, TarjetaExpo } from "../components/card";
+import { SendEmail, SendWhatsapp } from "../components/profile";
 import { Me } from "../store/me";
 
 export const Root = () => {
   const { profile, who } = Me;
+
   const CardsLeftTop = [
     {
       title: "Quien soy",
@@ -13,18 +16,8 @@ export const Root = () => {
       title: "Contactame",
       content: [
         "Lima, Perú",
-        '<a class="text-emerald-500 hover:text-emerald-600 font-mono font-medium"' +
-          'href="mailto:' +
-          profile.emailCurrent +
-          '?subject=Contactar a Pablo Vega - DESARROLLADOR" target="_blank">' +
-          profile.emailCurrent +
-          "</a>",
-        '<a class="text-emerald-500 hover:text-emerald-600 font-mono font-medium"' +
-          ' href="https://wa.me/' +
-          profile.whatsapp +
-          '/" target="_blank">' +
-          profile.phoneCurrent +
-          "</a>"
+        <SendEmail {...profile} />,
+        <SendWhatsapp {...profile} />
       ]
     },
     {
@@ -68,7 +61,7 @@ export const Root = () => {
         {/* IMAGE PROFILE */}
         <div className="hidden md:block border-2 border-gray-200 rounded-t-full rounded-b-full p-4 mx-5">
           <img
-            src="https://picsum.photos/400/800"
+            src="https://picsum.photos/2400/4800"
             className={"rounded-t-full rounded-b-full w-full h-full"}
             alt="Pablo Vega"
           />
