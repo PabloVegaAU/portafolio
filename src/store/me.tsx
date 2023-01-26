@@ -1,4 +1,6 @@
-export const Me = {
+import { TypeMe } from "../types";
+
+export const Me: TypeMe = {
   profile: {
     author: "Pablo Vega",
     authorMYS: "PABLO VEGA",
@@ -16,9 +18,9 @@ export const Me = {
     phoneCurrent: "+51 980251512",
     whatsapp: "51980251512",
     yearsExperience: "1",
-    proyects: "2",
+    proyects: "2"
   },
   who: {
-    main: "Compañero de trabajo confliable, adaptable a cualquier tipo de proyecto, con ganas de aprender y mejorar cada día.",
-  },
+    main: "Compañero de trabajo confliable, adaptable a cualquier tipo de proyecto, con ganas de aprender y mejorar cada día."
+  }
 };
