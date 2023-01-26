@@ -51,7 +51,7 @@ export const Root = () => {
         <h1 className="text-2xl md:text-5xl">{profile.mainDescription}</h1>
         <h1 className="text-2xl md:text-5xl">{profile.subDescription}</h1>
       </div>
-      <div className="flex flex-col md:flex-row gap-5 font-serif p-10 md:py-20 md:px-16">
+      <div className="flex flex-col md:flex-row gap-5 font-serif p:10 md:p-0 lg:py-20 lg:px-16">
         {/* CARDS LEFT MD:TOP */}
         <div className={"flex flex-1 flex-col gap-12 my-auto"}>
           {CardsLeftTop.map((card, i) => (
@@ -62,7 +62,9 @@ export const Root = () => {
         <div className="hidden md:block border-2 border-gray-200 rounded-t-full rounded-b-full p-4 mx-5">
           <img
             src="https://picsum.photos/2400/4800"
-            className={"rounded-t-full rounded-b-full w-full h-full"}
+            className={
+              "rounded-t-full rounded-b-full max-w-xs h-full object-cover"
+            }
             alt="Pablo Vega"
           />
         </div>
@@ -76,7 +78,7 @@ export const Root = () => {
         <div className="md:hidden mx-auto border-2 border-gray-200 rounded-t-full rounded-b-full p-4">
           <img
             src="https://picsum.photos/400/800"
-            className={"rounded-t-full rounded-b-full w-full h-full"}
+            className={"rounded-t-full rounded-b-full w-full"}
             alt="Pablo Vega"
           />
         </div>
