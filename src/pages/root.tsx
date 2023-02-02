@@ -11,24 +11,24 @@ export const Root = () => {
 		{
 			id: 1,
 			title: "Quien soy",
-			content: [who.main],
+			content: [{ id: 1, content: who.main }],
 		},
 		{
 			id: 2,
 			title: "Contactame",
 			content: [
-				"Lima, Perú",
-				<SendEmail {...profile} />,
-				<SendWhatsapp {...profile} />,
+				{ id: 1, content: "Lima, Perú" },
+				{ id: 2, content: <SendEmail {...profile} /> },
+				{ id: 3, content: <SendWhatsapp {...profile} /> },
 			],
 		},
 		{
 			id: 3,
 			title: "Servicios",
 			content: [
-				"Diseño Web Responsive",
-				"Desarrollo Backend Microservicios",
-				"Desarrollo FrontEnd Responsive",
+				{ id: 1, content: "Diseño Web Responsive" },
+				{ id: 2, content: "Desarrollo Backend Microservicios" },
+				{ id: 3, content: "Desarrollo FrontEnd Responsive" },
 			],
 		},
 	];
@@ -36,9 +36,9 @@ export const Root = () => {
 		{
 			id: 1,
 			title: "Años de experiencia",
-			content: [profile.yearsExperience],
+			content: profile.yearsExperience,
 		},
-		{ id: 2, title: "Proyectos", content: [profile.proyects] },
+		{ id: 2, title: "Proyectos", content: profile.proyects },
 	];
 	return (
 		<>
