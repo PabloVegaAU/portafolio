@@ -1,6 +1,6 @@
 export const Footer = () => {
 	return (
-		<div className="flex flex-row gap-2 m-2.5 justify-center">
+		<div className="flex flex-row gap-2 py-4 justify-center">
 			<img
 				src="./imgs/footer/UniversidadAutonomaPeruLogo.png"
 				className={"rounded-full w-12 h-12 object-cover"}

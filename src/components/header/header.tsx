@@ -36,7 +36,7 @@ const Header = () => {
 		},
 		{
 			id: 2,
-			path: Paths.tools,
+			path: Paths.contact,
 			title: t("header.contact"),
 			arialabel: "Contact with me.",
 		},
