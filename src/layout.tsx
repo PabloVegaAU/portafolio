@@ -4,25 +4,25 @@ import { Footer } from "./components/footer/footer";
 import Header from "./components/header/header";
 
 type Props = {
-  children: React.ReactNode;
+	children: React.ReactNode;
 };
 
 export const AppHeader = () => {
-  return <Header />;
+	return <Header />;
 };
 export const AppContent = (props: Props) => {
-  return (
-    <main>
-      <Container>{props.children}</Container>
-    </main>
-  );
+	return (
+		<main>
+			<Container>{props.children}</Container>
+		</main>
+	);
 };
 export const AppFooter = () => {
-  return (
-    <footer>
-      <Container>
-        <Footer />
-      </Container>
-    </footer>
-  );
+	return (
+		<footer>
+			<Container>
+				<Footer />
+			</Container>
+		</footer>
+	);
 };
