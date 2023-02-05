@@ -1,3 +1,3 @@
-export { Root } from "./root";
-export { Tools } from "./tools";
-export { Contact } from "./contact";
+export { Root } from "./root/root";
+export { DevTools } from "./devtools/devtools";
+export { Contact } from "./contact/contact";

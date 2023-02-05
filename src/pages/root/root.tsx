@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async";
 
-import { Tarjeta, TarjetaExpo } from "../components/card";
-import { SendEmail, SendWhatsapp } from "../components/profile";
-import { Me } from "../store/me";
+import { Tarjeta, TarjetaExpo } from "../../components/card";
+import { SendEmail, SendWhatsapp } from "../../components/profile";
+import { Me } from "../../store/me";
 
 export const Root = () => {
 	const { profile, who } = Me;
@@ -48,14 +48,16 @@ export const Root = () => {
 					content="Este sitio web está hecho para mostrar el recorrido, conocimientos y herramientas que he adquirido a lo largo de mi vida como estudiante de la carrera de Ingeniería en Sistemas"
 				/>
 			</Helmet>
-			<div className="mx-auto text-center font-serif p-3 md:p-7">
+			{/* TITLE */}
+			<div className="mx-auto text-center font-serif p-3 md:p-5">
 				<span translate="no">
-					<h1 className="text-2xl md:text-5xl">{profile.authorMYS}</h1>
+					<h1 className="text-xl md:text-4xl">{profile.authorMYS}</h1>
 				</span>
-				<h1 className="text-2xl md:text-5xl">{profile.mainDescription}</h1>
-				<h1 className="text-2xl md:text-5xl">{profile.subDescription}</h1>
+				<h1 className="text-xl md:text-4xl">{profile.mainDescription}</h1>
+				<h1 className="text-xl md:text-4xl">{profile.subDescription}</h1>
 			</div>
-			<div className="flex flex-col md:flex-row gap-5 font-serif p:10 md:p-0 lg:py-20 lg:px-16">
+			{/* ABOUT ME */}
+			<div className="flex flex-col md:flex-row gap-5 font-serif pb-4 lg:px-16">
 				{/* CARDS LEFT MD:TOP */}
 				<div className={"flex flex-1 flex-col gap-12 my-auto"}>
 					{CardsLeftTop.map((card) => (
