@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "./components/container/container";
+import { MainContainer } from "./components/container/mainContainer";
 import { Footer } from "./components/footer/footer";
 import Header from "./components/header/header";
 
@@ -11,18 +11,8 @@ export const AppHeader = () => {
 	return <Header />;
 };
 export const AppContent = (props: Props) => {
-	return (
-		<main>
-			<Container>{props.children}</Container>
-		</main>
-	);
+	return <MainContainer>{props.children}</MainContainer>;
 };
 export const AppFooter = () => {
-	return (
-		<footer>
-			<Container>
-				<Footer />
-			</Container>
-		</footer>
-	);
+	return <Footer />;
 };
