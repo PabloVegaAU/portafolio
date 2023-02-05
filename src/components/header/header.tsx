@@ -56,7 +56,7 @@ const Header = () => {
 			path: PathSociales.github,
 			icon: <Github />,
 			title: "Facebook",
-			arialabel: "Redirect to my  GitHub.",
+			arialabel: "Redirect to my GitHub.",
 		},
 		{
 			id: 2,
