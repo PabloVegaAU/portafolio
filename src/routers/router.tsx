@@ -1,4 +1,4 @@
-import { Contact, Root, Tools } from "../pages";
+import { Contact, Root, DevTools } from "../pages";
 import { Paths } from "../store";
 
 export const router = [
@@ -8,7 +8,7 @@ export const router = [
 	},
 	{
 		path: Paths.tools,
-		element: <Tools />,
+		element: <DevTools />,
 	},
 	{
 		path: Paths.contact,
