@@ -44,9 +44,10 @@ const DevToolContainer = ({ code, tools }: TypeDevTool) => {
 };
 
 const DevTool = (tool: TypeTool) => {
-	const { imgPath, imgAlt, porcentaje } = tool;
+	const { name, imgPath, imgAlt, porcentaje } = tool;
 	return (
-		<div className="text-center bg-gray-100 rounded-3xl w-36 md:w-44 p-2">
+		<div className="text-center bg-gray-100 rounded-3xl w-36 md:w-44 md:min-w-fit p-2">
+			<div className="m-auto text-3xl p-1 md:p-3 whitespace-nowrap">{name}</div>
 			<img
 				src={imgPath}
 				alt={imgAlt}
