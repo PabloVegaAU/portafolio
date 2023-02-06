@@ -23,18 +23,50 @@ export const DevToools: TypeDevTool[] = [
 	},
 	{
 		id: 2,
+		code: "LP",
+		title: "LENGUAJE DE PROGRAMACIÓN",
+		content: "",
+		tools: [
+			{
+				name: "JAVA",
+				imgPath: "./imgs/devtools/JAVA.png",
+				imgAlt: "JAVA",
+				porcentaje: 70,
+			},
+			{
+				name: "PHP",
+				imgPath: "./imgs/devtools/PHP.png",
+				imgAlt: "PHP",
+				porcentaje: 70,
+			},
+			{
+				name: "JAVASCRIPT",
+				imgPath: "./imgs/devtools/JAVASCRIPT.png",
+				imgAlt: "JAVASCRIPT",
+				porcentaje: 70,
+			},
+			{
+				name: "TYPESCRIPT",
+				imgPath: "./imgs/devtools/TYPESCRIPT.png",
+				imgAlt: "TYPESCRIPT",
+				porcentaje: 70,
+			},
+		],
+	},
+	{
+		id: 3,
 		code: "FB",
 		title: "FRAMEWORKS BACKEND",
 		content: "",
 		tools: [
 			{
-				name: "SPRING BOOT - JAVA",
+				name: "SPRING BOOT",
 				imgPath: "./imgs/devtools/SPRINGBOOT.png",
 				imgAlt: "SPRINGBOOT",
 				porcentaje: 70,
 			},
 			{
-				name: "LARAVEL - PHP",
+				name: "LARAVEL",
 				imgPath: "./imgs/devtools/LARAVEL.png",
 				imgAlt: "LARAVEL",
 				porcentaje: 70,
@@ -42,19 +74,19 @@ export const DevToools: TypeDevTool[] = [
 		],
 	},
 	{
-		id: 3,
+		id: 4,
 		code: "FF",
 		title: "FRAMEWORKS FRONTEND",
 		content: "",
 		tools: [
 			{
-				name: "REACT - JSX/TSX",
+				name: "REACT",
 				imgPath: "./imgs/devtools/REACT.png",
 				imgAlt: "REACT",
 				porcentaje: 65,
 			},
 			{
-				name: "LARAVEL - PHP",
+				name: "LARAVEL",
 				imgPath: "./imgs/devtools/LARAVEL.png",
 				imgAlt: "LARAVEL",
 				porcentaje: 60,
@@ -62,7 +94,7 @@ export const DevToools: TypeDevTool[] = [
 		],
 	},
 	{
-		id: 4,
+		id: 5,
 		code: "DT",
 		title: "DISEÑO DE PROTOTIPOS",
 		content: "",
